@@ -5,7 +5,7 @@ const itemsPerPage = 12;
 let sortOrder = '=';
 
 document.addEventListener("DOMContentLoaded", async () => {
-  const res = await fetch("https://restcountries.com/v3.1/all");
+  const res = await fetch("https://restcountries.com/v3.1/all?fields=name,capital,flags,languages,region,subregion,population");
   countriesData = await res.json();
   renderLanguageOptions();
   renderRegionOptions();
